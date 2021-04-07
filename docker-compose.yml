@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.12.0
+    container_name: elasticsearch
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ulimits:
+      memlock: 2000000
+    volumes:
+      - data01:/usr/share/elasticsearch/data
+    ports:
+      - 127.0.0.1:9200:9200
+    networks:
+      - elastic
+  
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.12.0
+    # volumes:
+    #   - ./config/kibana.yml:/usr/share/kibana/config/kibana.yml
+    ports:
+      - 127.0.0.1:5601:5601
+    environment:
+      ELASTICSEARCH_HOSTS: http://elasticsearch:9200
+    networks:
+      - elastic
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.12.0
+    # volumes:
+    #   - ./config/logstash.yml:/usr/share/logstash/config/logstash.yml
+    networks:
+      - elastic
+
+volumes:
+  data01:
+    driver: local
+
+networks:
+  elastic:
+    driver: bridge
+
+  
+
+  
