@@ -1,4 +1,4 @@
-# 🦌 ELK Stack Dockercompose 🦌
+# 🦌 ELK Stack Docker Compose 🦌
 
 > This project is to create a simple Dockercompose file that will spin up and connect
 > all the core pieces of an [ELK](https://www.elastic.co/what-is/elk-stack) stack for testing and learning on.
