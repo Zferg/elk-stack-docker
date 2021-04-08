@@ -3,6 +3,12 @@
 > This project is to create a simple Dockercompose file that will spin up and connect
 > all the core pieces of an [ELK](https://www.elastic.co/what-is/elk-stack) stack for testing and learning on.
 
+# 🛠️ Usage 🛠️
+
+> 1. Install [Docker Desktop](https://www.docker.com/products/docker-desktop)
+> 2. Install [Docker Compose](https://docs.docker.com/compose/install/)
+> 3. Download and open in your IDE/Editor
+> 4. Run using `docker-compose up`
 
 # 🧩 Core Pieces 🧩
 
