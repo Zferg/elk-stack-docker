@@ -25,5 +25,6 @@
 ## [Beats](https://www.elastic.co/beats/) 🐝
 
 > Now while currently not in this project it would be wrong to not mention [Beats](https://www.elastic.co/beats/) while talking about the core ELK stack.
-> This is not a singlular unit but rather a family of data shippers that can work on nearly any server or machine that you throw them at. 
-> These are the worker bees for the ELK stack, they are what collects and sends out the data for you to work with!
+> This is not a singlular unit but rather a family of data shippers that can work on nearly any server or machine that you throw them at and if a premade one doesn't exist
+> then you can create your own! These are the worker bees for the ELK stack, they are what collects and sends out the data for you to work with.
+
