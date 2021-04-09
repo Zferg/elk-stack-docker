@@ -18,8 +18,8 @@ services:
   
   kibana:
     image: docker.elastic.co/kibana/kibana:7.12.0
-    # volumes:
-    #   - ./config/kibana.yml:/usr/share/kibana/config/kibana.yml
+    volumes:
+      - ./config/kibana.yml:/usr/share/kibana/config/kibana.yml
     ports:
       - 127.0.0.1:5601:5601
     environment:
@@ -29,8 +29,8 @@ services:
 
   logstash:
     image: docker.elastic.co/logstash/logstash:7.12.0
-    # volumes:
-    #   - ./config/logstash.yml:/usr/share/logstash/config/logstash.yml
+    volumes:
+      - ./config/logstash.yml:/usr/share/logstash/config/logstash.yml
     networks:
       - elastic
 

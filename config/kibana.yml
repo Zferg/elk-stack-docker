@@ -1,0 +1,19 @@
+
+server.port: 5601
+server.host: "localhost"
+server.name: "kibanalocal"
+
+elasticsearch.hosts: ["http://localhost:9200"]
+
+kibana.index: ".kibana"
+
+elasticsearch.username: "kibanadocker"
+elasticsearch.password: "password"
+
+elasticsearch.pingTimeout: 2000
+elasticsearch.requestTimeout: 30000
+
+logging.dest: stdout
+logging.silent: false
+logging.quiet: false
+logging.verbose: false
